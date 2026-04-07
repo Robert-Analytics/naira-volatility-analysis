@@ -33,5 +33,13 @@ This project analyzes the historical volatility of the Nigerian Naira (NGN) agai
 ### 💡 Why this matters
 In the Nigerian Fintech space, understanding currency risk is vital for cross-border transactions and liquidity management. This project serves as a framework for automating currency risk assessment.
 
+## 📊 Key Results
+
+### Initial Data Insights
+
+- **Dataset Span:** 1995 – 2024 (7,000+ entries)
+- **Cleaning Actions:** Standardized ISO dates, removed empty volume metrics, and normalized percentage changes
+- **SQL Milestone:** Successfully implemented Rolling 30-Day Standard Deviation to track "Volatility Clusters" during major policy shifts
+
 **Connect with the Developer:**
 [LinkedIn](https://www.linkedin.com/in/robert-analytics) | [X (Twitter)](https://x.com/rrobertemanuel)
