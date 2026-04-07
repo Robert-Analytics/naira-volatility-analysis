@@ -25,7 +25,7 @@ This project analyzes the historical volatility of the Nigerian Naira (NGN) agai
 
 ## 📈 Roadmap & Status
 - [x] Data Sourcing (CBN Historical Data)
-- [ ] Data Cleaning & SQL Transformation (In Progress)
+- [x] Data Cleaning & SQL Transformation (In Progress)
 - [ ] Power BI Dashboard Development
 - [ ] Final Insights Report
 
