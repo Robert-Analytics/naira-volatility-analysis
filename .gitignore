@@ -1,0 +1,4 @@
+# Ignore Excel temp files
+~$*
+.DS_Store
+*.log
