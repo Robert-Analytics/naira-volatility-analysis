@@ -7,15 +7,15 @@
 This project analyzes the historical volatility of the Nigerian Naira (NGN) against the US Dollar (USD). By leveraging SQL and Power BI, I identify high-risk periods, correlation with global market events, and the impact of domestic policy shifts on currency stability.
 
 ## 🛠️ Tech Stack & Methodology
-- **Data Engineering**: Python/Excel for initial ingestion and ETL.
+- **Data Engineering**: Python for initial ingestion and ETL.
 - **Data Analysis**: SQL (Window Functions) to calculate Rolling Volatility and Daily Percentage Change.
 - **Visualization**: Power BI for dynamic trend dashboards and risk-level heatmaps.
 - **Domain Focus**: Risk Management, Macroeconomics, and Forex Market Microstructure.
 
 ## 🔍 Key Research Questions
-1. **Volatility Clusters**: Which specific quarters showed the highest variance in the USD/NGN pair?
-2. **Policy Impact**: How did major CBN policy shifts (e.g., unification of windows) correlate with spike intensity?
-3. **Risk Metrics**: What is the Average True Range (ATR) equivalent for the Naira on a monthly basis?
+1. **Regime Analysis**: How do periods of official "Devaluation Jumps" (discontinuous step-functions) statistically differ from periods of "Managed Float" (continuous daily variance) between 1995 and 2024?
+2. **Policy Transmission Lag**: What is the quantifiable lag (in trading days) between major CBN liquidity interventions/policy unifications and the stabilization of market volatility?
+3. **Dynamic Risk Orchestration**: How do rolling 30-day Annualized Volatility and ATR metrics perform as dynamic, real-time indicators for USD/NGN risk compared to traditional static thresholding?
 
 ## 📂 Repository Structure
 - `📂 data/` — Raw CSV files (CBN source) and cleaned datasets.
