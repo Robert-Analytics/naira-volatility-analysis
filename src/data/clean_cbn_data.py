@@ -1,7 +1,6 @@
 import pandas as pd
 import os
 
-
 def clean_cbn_data():
     # Get the directory where this script is currently located
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -38,19 +37,23 @@ def clean_cbn_data():
         'Change %': 'change_pct'
     })
 
-    # Standardize Date
+    # 1. Standardize Date
     df['trade_date'] = pd.to_datetime(df['trade_date'])
 
-    # Clean Percentage column
+    # 2. ENFORCE THE 2024 BOUNDARY
+    # Filter out any rows where the date goes past December 31, 2024
+    df = df[df['trade_date'] <= '2024-12-31']
+
+    # 3. Clean Percentage column
     if df['change_pct'].dtype == 'object':
         df['change_pct'] = df['change_pct'].str.replace('%', '').astype(float) / 100
 
-    # Sort and Save
+    # 4. Sort and Save
     df = df.sort_values('trade_date').reset_index(drop=True)
 
     os.makedirs(output_dir, exist_ok=True)
     df.to_csv(output_file, index=False)
-    print(f"Pipeline Success: Cleaned data saved to {output_file}")
+    print(f"Pipeline Success: Cleaned data truncated to 2024 and saved to {output_file}")
 
 
 if __name__ == "__main__":
