@@ -55,7 +55,7 @@ The front-end design separates high-level executive KPIs from granular analytica
 
 > Power BI risk dashboard — four-layer architecture (KPI scorecard, trend timeline, heatmap matrix, date slicer).
 
-![Power BI Dashboard](../Visuals/dashboard_preview.png)
+![Power BI Dashboard Preview](Visuals/dashboard_preview.png)
 
 ## 📂 Repository Structure
 * `📂 data/` — Cleaned currency datasets and schema source definitions.
