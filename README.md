@@ -22,7 +22,7 @@ The core processing relies on the `volatility_analytics` table materialized with
 | **trade_date** | DATE | Primary key for calendar dimensions and time-series mapping |
 | **close_price** | FLOAT | Daily official closing exchange rate |
 | **log_return** | FLOAT | Continuous daily returns calculated via $\ln(P_t / P_{t-1})$ |
-| **true_range** | FLOAT | Absolute high-to-low intraday price dispersion metric |
+| **true_range** | FLOAT | Gap-adjusted daily range: maximum of high-low, high-previous close, and low-previous close differences |
 | **vol_annualized_30d** | FLOAT | Rolling 30-day annualized standard deviation of log returns |
 | **atr_14d** | FLOAT | 14-day Average True Range tracking absolute asset volatility |
 | **vol_z_score** | FLOAT | Daily risk anomaly score measuring standard deviations from historical mean |
