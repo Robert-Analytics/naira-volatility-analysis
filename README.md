@@ -31,7 +31,7 @@ The core processing relies on the `volatility_analytics` table materialized with
 
 ## 🔍 Core Macro Research Questions Answered
 1. **Regime Discontinuity vs. Continuous Variance**: Quantified how sudden currency devaluations break traditional risk models, transitioning the market from tight managed bands to extreme volatility clusters.
-2. **Granularity Smoothing Resolution**: Proved that while monthly smoothed matrices mask tail-risk, daily row parsing isolates exact structural failure points.
+2. **Granularity Smoothing Resolution**: Demonstrated how monthly aggregation can mask extreme daily risk events, while daily-level analysis preserves visibility into individual structural shocks. daily row parsing isolates exact structural failure points.
 3. **Dynamic Risk Orchestration**: Replaced static risk thresholds with a rolling $Z$-score anomaly framework to monitor real-time tail-risk shocks.
 
 ---
@@ -42,7 +42,7 @@ The core processing relies on the `volatility_analytics` table materialized with
 * **The June 2023 Tail-Risk Event**: On the removal of the currency peg, the engine isolated a historic single-day risk shock of **15.55 standard deviations ($Z$-score)** above the historical mean. 
 * **Smoothing Discrepancy**: While the daily data printed a maximum risk shock of **15.55**, the aggregated monthly matrix smoothed June 2023 out to a localized average $Z$-score of **3.89**, demonstrating the vital importance of multi-granularity risk dashboards.
 
-### Production Dashboard Architecture
+### Dashboard Architecture
 The front-end design separates high-level executive KPIs from granular analytical exploration grids:
 1. **Scorecard Layer**: Tracks global historical norms against worst-case maximum standard deviation spikes.
 2. **Trend Timeline**: A continuous time-series visualization tracking structural volatility regimes.
@@ -50,6 +50,12 @@ The front-end design separates high-level executive KPIs from granular analytica
 4. **Control Layer**: An interactive date slicer allowing users to isolate specific macroeconomic windows.
 
 ---
+
+## 📸 Dashboard Preview
+
+> Power BI risk dashboard — four-layer architecture (KPI scorecard, trend timeline, heatmap matrix, date slicer).
+
+![Dashboard Preview](visuals/dashboard_preview.png)
 
 ## 📂 Repository Structure
 * `📂 data/` — Cleaned currency datasets and schema source definitions.
@@ -61,7 +67,7 @@ The front-end design separates high-level executive KPIs from granular analytica
 * [x] Construct BigQuery SQL views for vectorized statistical computations.
 * [x] Standardize Power BI semantic model data aggregations (Average vs Max).
 * [x] Implement dynamic report cross-filtering and interactive date slicers.
-* [ ] Publish Medium documentation case study.
+* [x] Publish Medium documentation case study.
 
 ---
 **Connect with the Developer:**
